@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Amazon="http://schemas.android.com/apk/lib/com.amazon.device.ads"
+    android:id="@+id/viewFlipper">
+    
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/green"
+    android:orientation="vertical" >
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+<LinearLayout
+    android:id="@+id/box"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+ 
+<LinearLayout
+    android:id="@+id/mainScreen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     >
+  
+</LinearLayout>
+<!--  
+    <Button
+        android:id="@+id/addRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/add_recording_toggle"
+        android:onClick="addRecording" />
+        -->
+<!--  
+    <com.amazon.device.ads.AdLayout
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.amazon.device.ads.AdLayout>
+-->
+</LinearLayout>    
+
+
+    </ScrollView>
+
+      <com.google.ads.AdView
+          android:id="@+id/adView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="20dp"
+          ads:adSize="BANNER"
+          ads:adUnitId="ca-app-pub-2377934805759836/4988399360"
+          ads:loadAdOnCreate="true"
+          android:gravity="center_horizontal" >
+
+      </com.google.ads.AdView>
+     
+           
+           
+</LinearLayout>
+
+<RelativeLayout
+    android:id="@+id/popup_element"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#444444"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+
+    <EditText
+        android:id="@+id/soundname"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+         android:background="@drawable/apptheme_edit_text_holo_light" >
+
+        </EditText>
+    
+    <ImageView
+        android:id="@+id/micImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/record"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/greenlight" />
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soundname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/white"
+        android:text="Record"
+        android:background="@drawable/apptheme_btn_default_holo_light" />     
+
+    <Button
+        android:id="@+id/stop"
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/record"
+        android:layout_below="@+id/soundname"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/white"
+        android:background="@drawable/apptheme_btn_default_holo_light" />
+
+               <Button
+                   android:id="@+id/done"
+                   android:text = "Done"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="20dp"
+                   android:layout_below="@id/micImage"
+                   android:layout_marginTop="25dp"
+                   android:textColor="@color/white"
+                   android:background="@drawable/apptheme_btn_default_holo_light" />
+
+               <Button
+                   android:id="@+id/cancel"
+                   android:text = "Cancel"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/micImage"
+                   android:layout_marginTop="25dp"
+                   android:layout_marginLeft="45dp"
+                   android:layout_toRightOf="@id/done"
+                   android:textColor="@color/white"
+                   android:background="@drawable/apptheme_btn_default_holo_light" />
+
+      <Button
+          android:id="@+id/share"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/ic_share"
+          android:layout_toRightOf="@id/soundname" 
+          />
+       
+</RelativeLayout>
+
+
+
+</ViewFlipper>
